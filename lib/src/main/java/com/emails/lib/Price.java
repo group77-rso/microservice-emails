@@ -1,4 +1,4 @@
-package com.scraper.lib;
+package com.emails.lib;
 
 public class Price {
 

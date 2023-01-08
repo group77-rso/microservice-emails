@@ -1,12 +1,10 @@
-FROM amazoncorretto:17
+FROM amazoncorretto:18
 RUN mkdir /app
 
 WORKDIR /app
 
-ADD ./api/target/scraper-api-1.0.0-SNAPSHOT.jar /app
+ADD ./api/target/emails-api-1.0.0-SNAPSHOT.jar /app
 
-EXPOSE 8081
+EXPOSE 8083
 
-CMD ["java", "-jar", "scraper-api-1.0.0-SNAPSHOT.jar"]
-#ENTRYPOINT ["java", "-jar", "products-api-1.0.0-SNAPSHOT.jar"]
-#CMD java -jar products-api-1.0.0-SNAPSHOT.jar
+CMD ["java", "-jar", "emails-api-1.0.0-SNAPSHOT.jar"]

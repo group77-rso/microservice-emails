@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: scraper-deployment
+  name: emails-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: scraper
+      app: emails
   template:
     metadata:
       labels:
-        app: scraper
+        app: emails
     spec:
       containers:
-        - image: barbaralipnik/scraper:latest
-          name: scraper
+        - image: barbaralipnik/emails:latest
+          name: emails
           ports:
-            - containerPort: 8082
+            - containerPort: 8083
               name: server
               protocol: TCP
 
@@ -25,12 +25,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: scraper-service
+  name: emails-service
 spec:
   type: LoadBalancer
   ports:
-    - port: 8082
+    - port: 8083
       protocol: TCP
       targetPort: server
   selector:
-    app: scraper
+    app: emails

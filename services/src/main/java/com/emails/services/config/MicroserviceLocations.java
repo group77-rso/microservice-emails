@@ -1,4 +1,4 @@
-package com.scraper.services.config;
+package com.emails.services.config;
 
 import com.kumuluz.ee.configuration.cdi.ConfigBundle;
 import com.kumuluz.ee.configuration.cdi.ConfigValue;

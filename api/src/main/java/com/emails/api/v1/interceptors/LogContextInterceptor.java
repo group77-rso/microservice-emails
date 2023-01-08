@@ -1,4 +1,4 @@
-package com.scraper.api.v1.interceptors;
+package com.emails.api.v1.interceptors;
 
 import com.kumuluz.ee.common.config.EeConfig;
 import com.kumuluz.ee.common.runtime.EeRuntime;

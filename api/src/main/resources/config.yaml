@@ -1,21 +1,21 @@
 kumuluzee:
-  name: scraper-service
+  name: emails-service
   env:
     name: dev
   version: 1.0.0
   server:
-    base-url: http://localhost:8082
+    base-url: http://localhost:8083
     http:
-      port: 8082
+      port: 8083
   health:
     checks:
       data-source-health-check:
         type: liveness
-        jndi-name: jdbc/scraperDS
+        jndi-name: jdbc/emailsDS
   metrics:
     web-instrumentation:
-      - name: scraper-endpoint
-        url-pattern: /v1/scraper/*
+      - name: emails-endpoint
+        url-pattern: /v1/emails/*
   logs:
     config-file: '<?xml version="1.0" encoding="UTF-8"?>
       <Configuration name="comments">

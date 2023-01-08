@@ -36,5 +36,5 @@ jobs:
         with:
           file: ./Dockerfile_with_maven_build
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/scraper:${{ steps.current-time.outputs.formattedTime }},
-                ${{ secrets.DOCKERHUB_USERNAME }}/scraper:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/emails:${{ steps.current-time.outputs.formattedTime }},
+                ${{ secrets.DOCKERHUB_USERNAME }}/emails:latest
