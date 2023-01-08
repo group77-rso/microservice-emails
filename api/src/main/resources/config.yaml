@@ -38,5 +38,6 @@ kumuluzee:
       </Configuration>'
 rest-properties:
   maintenance-mode: false
+  mail: bl8031@student.uni-lj.si
 microservice-locations:
   merchants: http://localhost:8081
