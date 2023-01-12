@@ -41,7 +41,7 @@ public class EmailsResource {
         requestId = requestId != null ? requestId : UUID.randomUUID().toString();
         log.log(Level.INFO,
                         "Received a request to send an email!"
-                                + " - requestId: " + finalRequestId)
+                                + " - requestId: " + requestId);
 
         String email = restProperties.getMail();
 
