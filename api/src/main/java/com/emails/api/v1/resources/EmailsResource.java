@@ -39,6 +39,9 @@ public class EmailsResource {
     public Response sendEmail(@Parameter(hidden = true) @HeaderParam("requestId") String requestId) {
 
         requestId = requestId != null ? requestId : UUID.randomUUID().toString();
+        log.log(Level.INFO,
+                        "Received a request to send an email!"
+                                + " - requestId: " + requestId);
 
         String email = restProperties.getMail();
 
