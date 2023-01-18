@@ -72,7 +72,7 @@ public class EmailsResource {
                 .uri(URI.create(api))
                 .timeout(Duration.ofMinutes(2))
                 .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer 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")
+                .header("Authorization", "Bearer XXXX")
                 .header("Content-Type", "keep-alive")
                 .header("Accept-Encoding", "gzip, deflate, br")
                 .POST(HttpRequest.BodyPublishers.ofString(requestBody))
